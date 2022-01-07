@@ -7,6 +7,7 @@ const nuevaString = "Hola";
 const nuevoNum = 15;
 
 // Crea una variable booleana:
+
 const nuevoBool = false;
 
 // Resuelve el siguiente problema matemático:
@@ -114,6 +115,10 @@ function elevarAlCuadrado(num) {
   // ojo: No es raiz cuadrada!
   // Tu código:
   // return num ** 2;
+
+  //Tres formas para hacer este ejercicio
+  // return num **2
+  //return num * num
   return Math.pow(num, 2);
 }
 
@@ -126,9 +131,12 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  //return Math.pow(num, exponent);
+  //return Math.pow(num, exponent) *Esta es una forma corta
   var expo = 1;
-  for (var i = 0; i < exponent; i++) expo = expo * num;
+
+  for (var i = 0; i < exponent; i++) {
+    expo = expo * num;
+  }
   return expo;
 }
 
@@ -213,8 +221,20 @@ function esVocal(letra) {
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length > 1) return "Dato incorrecto";
-  if ( letra === "a")
+  if (letra.length > 1) {
+    return "Dato incorrecto";
+  }
+  if (
+    letra === "a" ||
+    letra === "e" ||
+    letra === "i" ||
+    letra === "o" ||
+    letra === "u"
+  ) {
+    return "Es vocal";
+  } else {
+    return "Dato incorrecto";
+  }
 }
 
 // No modificar nada debajo de esta línea
